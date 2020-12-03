@@ -75,10 +75,10 @@ try:
 except:
 	aws_key = ""
 	aws_secret_key = ""
-
-g = Github(vincent6533, vincent6533!)
-repo = g.get_repo(vincent6533/bot)
-repo_restart = g.get_repo(vincent6533/botDB)
+	
+g = Github(git_access_token)
+repo = g.get_repo(git_access_repo)
+repo_restart = g.get_repo(git_access_repo_restart)
 
 def init():
 	global basicSetting
