@@ -26,7 +26,7 @@ logging.basicConfig(stream=log_stream, level=logging.WARNING)
 #handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 #ilsanglog.addHandler(handler)
 #####################################################
-intents = discord.Intents.all()
+
 basicSetting = []
 bossData = []
 fixed_bossData = []
@@ -3504,7 +3504,7 @@ class mainCog(commands.Cog):
 class IlsangDistributionBot(commands.AutoShardedBot):
 	
 	def __init__(self):
-		super().__init__(command_prefix=".", intents=intents)
+		super().__init__(command_prefix=[""], help_command=None)
 
 	def run(self):
 		super().run(access_token, reconnect=True)
