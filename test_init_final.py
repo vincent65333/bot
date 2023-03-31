@@ -3503,10 +3503,10 @@ class mainCog(commands.Cog):
 
 class IlsangDistributionBot(commands.AutoShardedBot):
 	
-	async def __init__(self):
-		super().__init__(command_prefix=[""], intents=intents, help_command=None)
+	def __init__(self):
+		super().__init__(command_prefix=".", intents=intents)
 
-	async def run(self):
+	def run(self):
 		super().run(access_token, reconnect=True)
 
 	async def on_ready(self):
