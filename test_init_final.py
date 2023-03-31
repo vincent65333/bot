@@ -26,7 +26,7 @@ logging.basicConfig(stream=log_stream, level=logging.WARNING)
 #handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 #ilsanglog.addHandler(handler)
 #####################################################
-
+intents = discord.Intents.all()
 basicSetting = []
 bossData = []
 fixed_bossData = []
@@ -3502,8 +3502,8 @@ class mainCog(commands.Cog):
 		return await PlaySound(ctx.voice_client, './sound/TJ' + str(resultTJ) +'.mp3')
 
 class IlsangDistributionBot(commands.AutoShardedBot):
+	
 	def __init__(self):
-		intents = discord.Intents.all()
 		super().__init__(command_prefix=[""], intents=intents, help_command=None)
 
 	def run(self):
