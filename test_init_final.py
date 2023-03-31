@@ -3502,9 +3502,9 @@ class mainCog(commands.Cog):
 		return await PlaySound(ctx.voice_client, './sound/TJ' + str(resultTJ) +'.mp3')
 
 class IlsangDistributionBot(commands.AutoShardedBot):
-	
+		
 	def __init__(self):
-		super().__init__(command_prefix=[""], help_command=None)
+		super().__init__(command_prefix=[""], intents=discord.Intents.all(), help_command=None)
 
 	def run(self):
 		super().run(access_token, reconnect=True)
