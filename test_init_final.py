@@ -3504,7 +3504,7 @@ class mainCog(commands.Cog):
 class IlsangDistributionBot(commands.AutoShardedBot):
 	def __init__(self):
 		intents = discord.Intents.all()
-		super().__init__(command_prefix='.',intents=intents)
+		super().__init__(command_prefix=[""], intents=intents, help_command=None)
 
 	def run(self):
 		super().run(access_token, reconnect=True)
